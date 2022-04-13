@@ -14,7 +14,7 @@ app.get('/:url',(req,res)=>{
     const url = ab
     getMetaData(url).then((data) => {
         res.json(data)
-    })      
+    }).catch(error=>console.log('505'))     
 })
 
 app.get('/:url/:suburl',(req,res)=>{
@@ -24,7 +24,7 @@ app.get('/:url/:suburl',(req,res)=>{
     const url = ab
     getMetaData(url).then((data) => {
         res.json(data)
-    })  
+    }).catch(error=>console.log('505')) 
 })
 
 app.get('/:url/:suburl/:subturl',(req,res)=>{
@@ -33,7 +33,7 @@ app.get('/:url/:suburl/:subturl',(req,res)=>{
     const url = ab
     getMetaData(url).then((data) => {
         res.json(data)
-    })
+    }).catch(error=>console.log('505')) 
       
     app.get('/:url/:suburl/:subturl/:subfurl',(req,res)=>{
         const dr= req.params
@@ -41,7 +41,7 @@ app.get('/:url/:suburl/:subturl',(req,res)=>{
         const url = ab
         getMetaData(url).then((data) => {
             res.json(data)
-        }) 
+        }).catch(error=>console.log('505')) 
         
     })
 
@@ -53,7 +53,7 @@ app.get('/:url/:suburl/:subturl',(req,res)=>{
             res.json(data)
         }) 
         
-    })
+    }).catch(error=>console.log('505')) 
     
 })
 
