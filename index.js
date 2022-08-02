@@ -6,7 +6,7 @@ const getMetaData = require('metadata-scraper')
 
 const app=express()
 
-app.use(cors())
+app.use(cors({ origin: ['https://www.onemco.com.au', 'https://www.onemco.com']}))
 
 app.get('/:url',(req,res)=>{
     const dr= req.params
